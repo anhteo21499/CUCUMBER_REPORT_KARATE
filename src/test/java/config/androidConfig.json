@@ -1,0 +1,22 @@
+{
+  "default": {
+    "hub": "http://127.0.0.1:4723/wd/hub",
+    "platformName": "Android",
+    "deviceName": "anhAA",
+    "automationName": "UiAutomator2",
+    "udid": "emulator-5554",
+    "appPackage": "com.fastacash.bb.dev.techcombank",
+    "appActivity": "com.techcombank.retail.DEFAULT",
+    "noReset" : true
+  },
+  "DOC_BAO": {
+    "hub": "http://127.0.0.1:4723/wd/hub",
+    "platformName": "Android",
+    "deviceName": "docbao",
+    "automationName": "UiAutomator2",
+    "udid": "emulator-5554",
+    "appPackage": "com.baohay24h7.docbao",
+    "appActivity": "com.baohay24h7.docbao.StartActivity",
+    "noReset" : true
+  }
+}

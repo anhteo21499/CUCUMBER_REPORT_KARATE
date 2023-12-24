@@ -33,14 +33,20 @@ public class MysocialTest {
         String buildNumber = "101";
         String projectName = "Live Demo Project";
         Configuration configuration = new Configuration(new File("target"), projectName);
+        // lần build góc trái màn hình bên trên
         configuration.setBuildNumber(buildNumber);
-
+        // thêm bảng thông số góc phải trên cùng màn hình : tuỳ biến
         configuration.addClassifications("Browser", "Firefox");
         configuration.addClassifications("Branch", "release/1.0");
-        configuration.setSortingMethod(SortingMethod.NATURAL);
-        configuration.addPresentationModes(PresentationMode.EXPAND_ALL_STEPS);
-        configuration.addPresentationModes(PresentationMode.PARALLEL_TESTING);
 
+        // sắp xếp tên của file feature
+        // configuration.setSortingMethod(SortingMethod.NATURAL);
+
+        // mở all step trong report
+        // configuration.addPresentationModes(PresentationMode.EXPAND_ALL_STEPS);
+
+        // thêm 1 côt qualify file json trong file report
+        configuration.addPresentationModes(PresentationMode.PARALLEL_TESTING);
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, configuration);
         reportBuilder.generateReports();
     }    
